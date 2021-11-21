@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible"
+    content="ie=edge">
+  <title>Popup</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <section class="article">
+    <p>Lorem ipsum dolor sit, amet consectetur
+      adipisicing elit. Quisquam in aliquid
+      laborum nihil dolores, quam sequi
+      facilis veritatis eius, recusandae unde?
+      Cum, libero soluta? Laborum necessitatibus
+      et placeat</p>
+    <button>Kup teraz</button>
+    <img src="image640.jpg" alt="">
+    <p>Lorem ipsum dolor sit amet consectetur,
+      adipisicing elit. Commodi praesentium, quo
+      labore eius asperiores aliquid
+      temporibus nemo nam quisquam? Nam commodi
+      beatae vero exercitationem neque placeat
+      laborum, perspiciatis libero
+      quae?</p>
+  </section>
+  <section class="modal-wrap">
+    <div class="modal">
+      <div class="top"></div>
+      <div class="middle"></div>
+      <div class="bottom"></div>
+      <span class="hide">X</span>
+    </div>
+  </section>
+
+
+  <script src="jquery-3.3.1.min.js"></script>
+  <script>
+    // kliknięcie w przycisk
+    // $('.article button').on('click', function () {
+    //  $('.modal-wrap').addClass('active');
+    //  $('.article').addClass('blur');
+    // })
+
+    // $('span.hide').on('click', function () {
+    //  $('.modal-wrap').removeClass('active');
+    //  $('.article').removeClass('blur');
+    // })
+    //WERSJA SKRÓCONA
+    // $('.article button, span.hide').on('click', function () {
+    //  $('.modal-wrap').toggleClass('active');
+    //  $('.article').toggleClass('blur');
+    // })
+
+    //WERSJA JS
+
+    // const btnModal = document.querySelector('.article button');
+    document.querySelector('.article button').addEventListener("click", function () {
+      document.querySelector('.modal-wrap').classList.add('active');
+      document.querySelector('.article').classList.add('blur')
+    })
+
+
+    document.querySelector('span.hide').addEventListener("click", function () {
+      document.querySelector('.modal-wrap').classList.remove('active');
+      document.querySelector('.article').classList.remove('blur')
+    })
+  </script>
+</body>
+
+</html>
