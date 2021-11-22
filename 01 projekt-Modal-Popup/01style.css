@@ -29,18 +29,31 @@ img {
   max-width: 100%;
 }
 
+img:hover {
+  cursor: pointer;
+}
+.btn {
+  width: 100px;
+  /* z-index: 1; */
+}
+
+.btn:hover {
+cursor: pointer;
+}
+
 .modal-wrap {
   position: fixed;
   top:0;
   left: 0;
   width: 100vw;
   height: 100vh;
-  opacity: 0;
-  backdrop-filter: blur(3px) brightness(50%);
+  display:none;
+  background: rgba(0,0,0, 0.5);
+  backdrop-filter: blur(3px);
 }
 
 .modal-wrap.show {
-  opacity: 1;
+  display:block;
 }
 
 .modal {

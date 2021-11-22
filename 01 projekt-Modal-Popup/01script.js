@@ -1,4 +1,4 @@
-const btn = document.querySelector('button')
+const button = document.querySelector('.btn')
 
 const hide = document.querySelector('.hide')
 
@@ -17,6 +17,6 @@ function remove() {
   modal.classList.remove('show')
 }
 
-pic.addEventListener('click', show)
+button.addEventListener('click', show)
 
 hide.addEventListener('click', remove)
