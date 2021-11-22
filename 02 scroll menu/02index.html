@@ -35,7 +35,7 @@
     }
 
     nav a {
-      /* flex-grow: 1; */
+      flex-grow: 1;
       font-family: arial;
       font-size: 30px;
       text-align: center;
@@ -100,6 +100,29 @@
 
   <script src="jquery-3.3.1.min.js"></script>
   <script>
+
+    //easy jQ
+    // $('.me').on('click', function () {
+    //   $('body,html').animate({
+    //     scrollTop: $('.s1').offset().top - 70
+    //   }, 1000)
+    // })
+
+    // $('.portfolio').on('click', function () {
+    //   $('body,html').animate({
+    //     scrollTop: $('.s2').offset().top - 70
+    //   }, 1000)
+    // })
+
+    //sofi jQ
+
+    $('nav a').on('click', function () {
+      const goTo = $(this).attr('class');
+      $('body,html').animate({
+        scrollTop: $('#' + goTo).offset().top - 70
+      }, 1000)
+    })
+
 
   </script>
 </body>
