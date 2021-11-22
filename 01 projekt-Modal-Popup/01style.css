@@ -7,8 +7,9 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  max-width: 800px;
+  max-width: 80vw;
   margin: 2rem  auto;
+  height: 200vh;
 }
 
 .article {
@@ -16,5 +17,72 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  height: 80vh;
+  height: 100vh;
+  text-align: center;
 }
+
+p,img {
+margin-top: 2rem;
+}
+
+img {
+  max-width: 100%;
+}
+
+.modal-wrap {
+  position: fixed;
+  top:0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  opacity: 0;
+  backdrop-filter: blur(3px) brightness(50%);
+}
+
+.modal-wrap.show {
+  opacity: 1;
+}
+
+.modal {
+  position: absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%, -50%);
+  width: 90vw;
+  height: 90vh;
+  background:#aaa;
+  border: 3px solid black;
+  border-radius: 5px;
+}
+
+.top,
+.bottom {
+  position: absolute;
+  width: 100%;
+  height: 20%;
+  background:darkolivegreen;
+}
+
+.bottom {
+  bottom:0;
+}
+
+.hide {
+  position: absolute;
+  top: -18px;
+  right:-18px;
+  display: block;
+  border: 2px solid black;
+  border-radius: 50%;
+  width: 36px;
+  height: 36px;
+  text-align: center;
+  line-height: 34px;
+  font-size: 1.5rem;
+  background: #aaa;
+}
+
+.hide:hover {
+  cursor: pointer;
+}
+
