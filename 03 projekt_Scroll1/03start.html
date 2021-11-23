@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Scroll - jQ effect</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+
+    .section1 {
+      background-color: rgb(32, 139, 143);
+      height: 100vh;
+    }
+
+    .section2 {
+      background-color: rgb(10, 34, 10);
+      height: 500px;
+
+    }
+
+    .section3 {
+      background-color: rgb(167, 46, 106);
+      height: 1290px;
+    }
+
+    .section4 {
+      background-color: rgb(102, 43, 28);
+      height: 150vh;
+    }
+
+    .info {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      height: 70px;
+      width: 100%;
+      box-shadow: 0 0 3px 3px grey;
+      background-color: rgb(200, 200, 200);
+      font-size: 30px;
+      line-height: 70px;
+      text-align: center;
+      bottom: -75px;
+      transition: .8s;
+    }
+
+    .info.active {
+      bottom: 0;
+    }
+  </style>
+</head>
+<!-- zmiana tekstów zrobić -->
+
+<body>
+
+  <section class="section1"></section>
+  <section class="section2"></section>
+  <section class="section3"></section>
+  <section class="section4"></section>
+  <div class="info">scroll position:</div>
+
+  <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+
+  <script>
+    $(window).on('scroll', function () {
+
+      $('.info').text('current scroll position: ' + $(window).scrollTop().toFixed() + ' px')
+
+      if ($(window).scrollTop() > $('.section3').offset().top) {
+        $('.info').addClass('active')
+      }
+      else $('.info').removeClass('active')
+
+    })
+
+
+  </script>
+</body>
+
+</html>
